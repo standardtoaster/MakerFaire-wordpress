@@ -1,0 +1,4 @@
+/* prevent bg image flicker on hover */
+html {
+    filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}

@@ -1,0 +1,36 @@
+This is simply my standard blank HTML5 Wordpress theme. I use it as a jumping-off point for my
+projects. It is based heavily on the "Blank" theme by Chris Coyier (it can be found at digwp.com).
+The original theme is HTML4, so I HTML5'd it up and am adding a couple of stuff such as:
+- four widget areas in convenient places for me: Header, Nav (for WP3 menu), Sidebar, Footer
+- two WP3 menus
+- a bunch of stuff in the functions.php file
+- my very specific, and probably wrong, HTML5 document structure
+
+That document structure is as follows:
+BODY [body class]
+-HEADER.body
+-NAV.body
+-SECTION.body [.index .page .single .archive]
+--aside
+--article [post class]
+---header
+---section
+---footer
+----section.comments
+-----article[.alt]
+------header
+------[comment text]
+--nav.pagination
+---ul
+---li (there are two li's, one for "prev posts" and one for "next posts")
+-footer.body
+
+I use a modified Toucan CSS Reset combined with some ideas from the CSS LESS framework (media
+queries for different screen sizes). I also place my CSS files in a <theme>/css folder and that
+location is used in the header.php file of the theme. The normal style.css is used only for theme
+information.
+
+I guarantee that this whole theme will change over time.
+
+Comments/Questions? Contact me at my site http://ajy.co or try leaving a comment here. Maybe I'll
+see it.

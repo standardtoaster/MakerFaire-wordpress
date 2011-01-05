@@ -1,0 +1,12 @@
+@font-face { 
+  font-family: '';
+  src: url('.eot');
+}
+
+/* self-clearing floats */
+.mod {zoom: 1;}
+
+/* IE7+ - scale images more attractively */
+img {
+	-ms-interpolation-mode: bicubic;
+}

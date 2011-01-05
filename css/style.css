@@ -1,0 +1,61 @@
+/* Imports */
+@import url("reset.css");
+
+@font-face {
+    font-family:'';
+    src: url(//:) format('no404'),
+    url('.woff') format('woff'),
+    url('.ttf') format('truetype'),
+    url('.svg#') format('svg');
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* OK, here we go */
+body { /* font-family, color, font-size */ }
+
+/* self-clearing floats */
+.mod:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* optional vanity styles */
+::selection {background: #c80000;}
+::-moz-selection {background: #c80000;}
+
+img::selection {background: transparent;}
+img::-moz-selection {background: transparent;}
+
+/* structural layout stuff */
+/* Default, 8-column: 768 px total width, 60px columns, 24px gutters, 60px columns */
+.gl { float: left; } /* adjust direction of float for golden columns here */
+.gs { float: right; }
+
+/* 13-column: 60px columns, 24px gutters, 72px margins, 1212px total */
+@media only screen and (min-width: 1212px) {
+}
+
+/* 5-column: 60px columns, 24px gutters, 42px margins, 480px total */
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+}
+
+/* 3-column: 60px columns, 24px gutters, 46px margins, 320px total */
+@media only screen and (max-width: 479px) {
+}
+/* end structural layout stuff */
+
+/* text and other general styles */
+h1 { }
+h2 { }
+h3 { }
+p {}
+ul {}
+ol {}
+hr {}
+
+/* page-specific stuff */
