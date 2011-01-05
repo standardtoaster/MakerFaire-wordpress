@@ -14,7 +14,6 @@
 	function removeHeadLinks() {
 		remove_action('wp_head', 'rsd_link');
 		remove_action('wp_head', 'wp_generator');
-		remove_action('wp_head', 'feed_links', 2);
 		remove_action('wp_head', 'index_rel_link');
 		remove_action('wp_head', 'wlwmanifest_link');
 		remove_action('wp_head', 'feed_links_extra', 3);
@@ -70,12 +69,6 @@
 	}
 	add_action( 'init', 'register_my_menus' );
 
-	// custom excerpt ellipses for 2.9+ - replace the [...] stuff
-	function custom_excerpt_more($more) {
-		return '[...]';
-	}
-	add_filter('excerpt_more', 'custom_excerpt_more');
-	
 	// add custom content after each post
 	function add_post_content($content) {
 		if(!is_feed() && !is_home()) {
