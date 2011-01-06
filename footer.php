@@ -6,7 +6,8 @@
 			<a href="http://ajy.co/"><span>Website Designed by</span> Aaron James Young</a>
 		</p> -->
 	</footer>
-	<!-- analytics, maybe jquery? -->
+	<!-- analytics -->
 	<?php wp_footer(); ?>
+    <script src="<?php bloginfo('template_directory'); ?>/scripts/custom.js"></script>
 </body>
 </html>
