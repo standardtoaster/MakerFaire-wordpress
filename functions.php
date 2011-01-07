@@ -61,13 +61,9 @@
 	//Support for Featured Images for posts or pages
 	add_theme_support( 'post-thumbnails' );
 	
-	//Support for (two) WP3 menus
-    function register_my_menus() {
-		register_nav_menus(
-			array( 'nav-menu' => __( 'Nav Menu' ), 'extra-menu' => __( 'Extra Menu' ))
-		);
-	}
-	add_action( 'init', 'register_my_menus' );
+	//Support for WP3 menus - create menus in the admin interface, then add them to widget areas in
+    //the theme (like, say, the Nav widget area). Menus are not baked into this theme.
+    add_theme_support( 'menus');
 
 	// add custom content after each post
 	function add_post_content($content) {
@@ -79,6 +75,11 @@
 	}
 	add_filter('the_content', 'add_post_content');
 	
+    //enable shortcodes in widgets
+    if (!is_admin()) {
+        add_filter('widget_text', 'do_shortcode', 11);
+    }
+
 	// sidebars / widget areas: I have one in the header, nav, sidebar, and footer
     if (function_exists('register_sidebar')) {
     	register_sidebar(array(

@@ -3,12 +3,12 @@
 
 /* General
 ---------------------------------------- */
-html, body, div, span, applet, object, iframe,
+html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, 
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
@@ -44,11 +44,10 @@ blockquote, q, cite { font-style: italic; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content: ""; content: none; }
-code, kbd, pre, samp, tt { } /* set a font */
+code, kbd, pre, samp, { } /* set a font */
 pre { /* word-wrap: break-word; */ white-space: pre-wrap; }
-abbr, acronym, dfn { border-bottom: 1px dotted; cursor: help; font-style: normal; font-variant: normal; }
+abbr, dfn { border-bottom: 1px dotted; cursor: help; font-style: normal; font-variant: normal; }
 var { font-style: normal; }
-center { text-align: center; }
 
 /* Hypertext
 ---------------------------------------- */
@@ -71,15 +70,13 @@ dd { margin-bottom: 1em; }
 /* Presentation
 ---------------------------------------- */
 hr { border: 0; border-bottom: 1px solid; }
-big { font-size: 1.25em; }
 small, sub, sup { font-size: .85em; }
 sub, sup { line-height: 1; }
 sub { vertical-align: bottom; }
 sup { vertical-align: top; }
-del, s, strike { text-decoration: line-through; }
+del, s, { text-decoration: line-through; }
 ins { border-bottom: 1px dotted; text-decoration: none; }
 bdo { border-bottom: 1px dotted; }
-u { text-decoration: underline; }
 
 /* Form
 ---------------------------------------- */
@@ -112,21 +109,52 @@ form, fieldset, textarea, input {
 .body { padding: 0 60px; width: 768px; margin: 0 auto; } /* keep top padding? */
 .gl /* golden large */ { width: 396px; }
 .gs /* golden small */ { width: 228px; }
+/* half-width, third-width, quarter-width, sixth-width classes.
+ * They float:left, have margin-right=24px (gutter), and the ones on the right have no margin-right
+ * This won't work real well in IE, TODO: Fix IE
+ * also TODO: consider using nth-child instead of nth-of-type in case I'm using these classes on
+ * different types of elements
+ * */
+.full { width: 648px; }
+.half { float: left; width: 312px; margin-right: 24px; }
+.half:nth-of-type(2n) { margin-right: 0; }
+.third { float: left; width: 200px; margin-right: 24px; }
+.third:nth-of-type(3n) { margin-right: 0; }
+.quarter { float: left; width: 144px; margin-right: 24px; }
+.quarter:nth-of-type(4n) { margin-right: 0; }
+/* todo - make this more sane, probably equate it with thirds in this layout */
+.sixth { float: left; width: 88px; margin-right: 24px; }
+.sixth:nth-of-type(6n) { margin-right: 0; }
 
 /* 13-column: 60px columns, 24px gutters, 72px margins, 1212px total */
 @media only screen and (min-width: 1212px) {
     .body { padding: 0 72px; width: 1212px; margin: 0 auto; }
     .gl { width: 648px; } .gs { width: 396px; }
+    .full { width: 1068px; }
+    .half { float: left; width: 522px; margin-right: 24px; }
+    .half:nth-of-type(2n) { margin-right: 0; }
+    .third { float: left; width: 340px; margin-right: 24px; }
+    .third:nth-of-type(3n) { margin-right: 0; }
+    .quarter { float: left; width: 249px; margin-right: 24px; }
+    .quarter:nth-of-type(4n) { margin-right: 0; }
+    .sixth { float: left; width: 158px; margin-right: 24px; }
+    .sixth:nth-of-type(6n) { margin-right: 0; }
 }
 
 /* 5-column: 60px columns, 24px gutters, 42px margins, 480px total */
 @media only screen and (max-width: 767px) and (min-width: 480px) {
     .body { padding: 0 42px; width: 480px; margin: 0 auto; }
     .gl { width: 228px; } .gs { width: 144px; }
+    .full { width: 396px; }
+    .half, .third, .quarter, .sixth { float: left; width: 174px; margin-right: 24px; }
+    .third:nth-of-type(3n) { margin-right: 24px; }
+    .half:nth-of-type(2n), .third:nth-of-type(2n), .quarter:nth-of-type(2n), .sixth:nth-of-type(2n) { margin-right: 0; }
 }
 
 /* 3-column: 60px columns, 24px gutters, 46px margins, 320px total */
 @media only screen and (max-width: 479px) {
     .body { padding: 0 46px; width: 320px; margin: 0 auto; }
-    .gl, .gs { width: 228px; float: left; }
+    .gl, .gs, .full, .half, .third, .quarter { width: 228px; float: left; margin: 0; }
+    .sixth { float: left; width: 102px; margin-right: 24px; }
+    .sixth:nth-of-type(2n) { margin-right: 0; }
 }
