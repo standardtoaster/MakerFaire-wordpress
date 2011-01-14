@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section class="body">
-		<aside><?php get_sidebar(); ?></aside>
+		<?php get_sidebar(); ?>
 		<article>
 			<header>
 				<h2>Error 404 - Page Not Found</h2>
