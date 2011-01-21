@@ -5,6 +5,9 @@
 	<!-- http://google.com/webmasters -->
     <meta name="google-site-verification" content="" />
 
+    <!-- prevent scaling pages in iOS devices. Probably redundant if used w/ media queries -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.png"/>
     <!-- This is the traditional favicon.
              - size: 16x16 or 32x32 -->
@@ -16,7 +19,7 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/css/ie.css"/>
+		<link rel="stylesheet" media="all" href="<?php bloginfo('template_directory'); ?>/css/ie.css"/>
         <!--below: ie-specific scripts...
             - use EITHER html5shiv OR modernizr, not both
             - the ie7/9 js is kind of like sandblasting a soup cracker, use smaller fixes first
