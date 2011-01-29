@@ -102,11 +102,12 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, li,
 form, fieldset, textarea, input { 
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; /* these settings work in FF, Webkit, and IE8+ - I need a fallback for IE7 */
+    box-sizing: border-box; /* these settings work in FF, Webkit, and IE8+ */
 }
 
-/* Default, 8-column: 768 px total width, 60px margins, 24px gutters, 60px columns */
-.body { padding: 0 60px; width: 768px; margin: 0 auto; } /* keep top padding? */
+/* Default, 8-column: 768 px total width, 60px margins, 24px gutters, 60px columns
+ * IE 6-8 will use these settings */
+.body { padding: 0 60px; width: 768px; margin: 0 auto; }
 .gl /* golden large */ { width: 396px; }
 .gs /* golden small */ { width: 228px; }
 /* half-width, third-width, quarter-width, sixth-width classes.
@@ -122,7 +123,7 @@ form, fieldset, textarea, input {
 .third:nth-of-type(3n) { margin-right: 0; }
 .quarter { float: left; width: 144px; margin-right: 24px; }
 .quarter:nth-of-type(4n) { margin-right: 0; }
-/* todo - make this more sane, probably equate it with thirds in this layout */
+/* todo - make this more sane, 88px is really narrow */
 .sixth { float: left; width: 88px; margin-right: 24px; }
 .sixth:nth-of-type(6n) { margin-right: 0; }
 

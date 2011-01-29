@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!--[if lte IE 7]><html class="ie7" <?php language_attributes(); ?>><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><! --><html <?php language_attributes(); ?>><!-- <![endif]-->
 <head>
 	<meta charset="utf-8" />
 	<!-- http://google.com/webmasters -->
@@ -20,13 +21,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" media="all" href="<?php bloginfo('template_directory'); ?>/css/ie.css"/>
-        <!--below: ie-specific scripts...
-            - use EITHER html5shiv OR modernizr, not both
-            - the ie7/9 js is kind of like sandblasting a soup cracker, use smaller fixes first
-            - selectivizr, pie.htc, and others are available
-            - remove this comment -->
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <!-- <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script> -->
 	<![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
@@ -60,10 +55,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header class="body"><!-- do I really need body classes with my LESS framework stuff? -->
-						 <!-- Hopefully setting the width of the body tag doesn't mess w/backgrounds -->
-						 <!-- perhaps I could use my media queries to set width of .body instead of <body> -->
-		<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('header-widget-area') ) : else : ?>
+	<header class="body">
+    <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('header-widget-area') ) : else : ?>
         <?php endif; ?>
 	</header>
 	<nav class="body">

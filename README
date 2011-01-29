@@ -32,7 +32,24 @@ queries for different screen sizes). I also place my CSS files in a <theme>/css 
 location is used in the header.php file of the theme. The normal style.css is used only for theme
 information.
 
+I use "box-sizing: border-box" in my reset stylesheet for layout elements. This means that browsers
+will calculate width and height to INCLUDE padding and border on those elements... see
+http://css-tricks.com/box-sizing/ for more info on this. This works in Gecko/Webkit browsers, Opera,
+and IE 8+. See below for my IE7- workaround.
+
 There are a couple template html files for easy development.
+
+My IE fallback system is pretty specific to my workflow as well:
+- For IE9, I do nothing at this time
+- IE8 is caught in the [if lt IE 9] conditional comment that contains the html5shiv and ie.css (IE
+  stylesheet) so adjustments can be made to the layout if needed.
+- IE7 and IE6 are also caught in the [if lt IE 9] conditional comment. They also get a different
+  <html> tag that contains [class="ie7"]. This is because IE7 and below don't work with the
+  box-sizing trick above, so we need to define different widths on those elements. ie.css has
+  several extra "reset" styles built in.
+- Note: I'm using html5shiv. If you use Modernizr, that already has the shiv built in
+- Note: IE 6-8 don't support media queries and will use the default 768px layout. You can use this
+  script: http://code.google.com/p/css3-mediaqueries-js/ to enable your media queries in IE
 
 I guarantee that this whole theme will change over time.
 

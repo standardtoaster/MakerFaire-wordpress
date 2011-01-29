@@ -10,3 +10,7 @@
 img {
 	-ms-interpolation-mode: bicubic;
 }
+
+/* fix measurements for IE 6 & 7 because they don't support box-sizing */
+/* they get the ie7 class on the html tag, so use as such: */
+.ie7 .body { width: 648px; } /* needed to fix the width of the .body stuff */
