@@ -1,12 +1,13 @@
 /* Imports */
 @import url("reset.css");
 
-@font-face {
+@font-face { /* fill in font name and filenames */
     font-family:'';
-    src: url(//:) format('no404'),
-    url('.woff') format('woff'),
-    url('.ttf') format('truetype'),
-    url('.svg#') format('svg');
+    src: url('.eot#') format('☺'), /* keep the hash */
+		url('.woff') format('woff'),
+		url('.ttf') format('truetype'),
+		url('.svg#xxx') format('svg'); /* replace xxx */
+	/* keep these lines */
     font-variant: normal;
     font-weight: normal;
     font-style: normal;
