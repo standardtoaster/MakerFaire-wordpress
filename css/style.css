@@ -3,7 +3,7 @@
 
 @font-face { /* fill in font name and filenames */
     font-family:'';
-    src: url('.eot#') format('☺'), /* keep the hash */
+    src: url('.eot?') format('☺'), /* keep the question mark */
 		url('.woff') format('woff'),
 		url('.ttf') format('truetype'),
 		url('.svg#xxx') format('svg'); /* replace xxx */
