@@ -37,6 +37,12 @@ img::-moz-selection {background: transparent;}
 .gl { float: left; } /* adjust direction of float for golden columns here */
 .gs { float: right; }
 
+/* default Wordpress classes added by the editor */
+/* these are here because they may need to be treated differently in different layouts */
+.alignright { float: right; display: inline; margin: 0 0 15px 15px; }
+.alignleft { float: left; display: inline; margin: 0 15px 15px 0; }
+.center { display: block; margin: 0 auto; }
+
 /* 13-column: 60px columns, 24px gutters, 72px margins, 1212px total */
 @media only screen and (min-width: 1212px) {
 }
