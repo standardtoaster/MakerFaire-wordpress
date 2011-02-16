@@ -19,7 +19,7 @@
 				<p><?php the_tags('<span>Tags:</span> ', ', ', ''); ?></p>
 				<p><span>Posted in</span> <?php the_category(', ') ?> | 
 				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-				<?php comments_template(); ?>
+				<?php //comments_template(); //this is only in single.php ?>
 			</footer>
 		</article>
 		<?php endwhile; ?>

@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 	<section class="body archive">
 		<?php get_sidebar(); ?>
-		<div>
 		<?php if (have_posts()) : ?>
 			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 			<?php /* If this is a category archive */ if (is_category()) { ?>
@@ -52,6 +51,5 @@
 			</header>
 		</article>
 		<?php endif; ?>
-		</div>
 	</section>
 <?php get_footer(); ?>

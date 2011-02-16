@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 	<section class="body search">
 		<?php get_sidebar(); ?>
-		<div>
 		<?php if (have_posts()) : ?>
 			<h2 class="pagetitle">Search Results</h2>
 			<?php while (have_posts()) : the_post(); ?>
@@ -37,6 +36,5 @@
 			</header>
 		</article>
 		<?php endif; ?>
-		</div>
 	</section>
 <?php get_footer(); ?>
