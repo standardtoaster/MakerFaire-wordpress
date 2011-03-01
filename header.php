@@ -6,8 +6,8 @@
 	<!-- http://google.com/webmasters -->
     <meta name="google-site-verification" content="" />
 
-    <!-- prevent scaling pages in iOS devices. Probably redundant if used w/ media queries -->
-    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <!-- don't allow IE9 to render the site in compatibility mode. Dude. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.png"/>
     <!-- This is the traditional favicon.
