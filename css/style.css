@@ -14,7 +14,8 @@
 }
 
 /* OK, here we go */
-body { /* font-family, color, font-size */ }
+body { font-family: 'Liberation Sans', sans-serif; /* no helvetica or arial */
+    /* set a pixel font size here, no need to set any other font sizes */ }
 
 /* self-clearing floats */
 .mod:after {
