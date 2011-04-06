@@ -1,6 +1,3 @@
-/* self-clearing floats */
-.mod {zoom: 1;}
-
 /* IE7+ - scale images more attractively */
 img {
 	-ms-interpolation-mode: bicubic;
@@ -21,5 +18,7 @@ img {
 
 
 /* fix measurements for IE 6 & 7 because they don't support box-sizing */
-/* they get the ie7 class on the html tag, so use as such: */
+/* they get the ie7 class on the html tag, so use as such:
+ * comment the below line if you're using the 960 default layout, it doesn't have padding so box-sizing won't
+ * matter */
 .ie7 .body { width: 648px; } /* needed to fix the width of the .body stuff */
