@@ -82,7 +82,7 @@ img { border: 0; }
 
 ul { list-style: disc outside none; }
 ol { list-style: decimal outside none; }
-li { margin-left: 2em; } /*20px?*/
+li { margin-left: 24px; } /* orig 2em */
 li ul, li ol { margin-bottom: 0; }
 dt { font-weight: bold; }
 dd { margin-bottom: 1em; }

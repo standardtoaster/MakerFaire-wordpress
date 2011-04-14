@@ -9,15 +9,6 @@
     <!-- don't allow IE9 to render the site in compatibility mode. Dude. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.png"/>
-    <!-- This is the traditional favicon.
-             - size: 16x16 or 32x32 -->
-    <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/custom_icon.png"/>
-    <!-- The is the icon for iOS's Web Clip.
-             - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
-             - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-             - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" media="all" href="<?php bloginfo('template_directory'); ?>/css/ie.css"/>
@@ -25,32 +16,14 @@
 	<![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
+	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>: Feed" href="<?php bloginfo('rss2_url'); ?>" />
+	
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>
-
-	<title>
-		   <?php
-		      if (function_exists('is_tag') && is_tag()) {
-		         single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
-		      elseif (is_archive()) {
-		         wp_title(''); echo ' Archive - '; }
-		      elseif (is_search()) {
-		         echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
-		      elseif (!(is_404()) && (is_single()) || (is_page())) {
-		         wp_title(''); echo ' - '; }
-		      elseif (is_404()) {
-		         echo 'Not Found - '; }
-		      if (is_home()) {
-		         bloginfo('name'); echo ' - '; bloginfo('description'); }
-		      else {
-		          bloginfo('name'); }
-		      if ($paged>1) {
-		         echo ' - page '. $paged; }
-		   ?>
-	</title>
-
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+	<title><?php wp_title(''); ?></title>
+	
+	<?php //if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
 
