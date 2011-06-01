@@ -31,6 +31,10 @@
 	<header class="body">
     <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('header-widget-area') ) : else : ?>
         <?php endif; ?>
+        <?php //todo - add an if_is_home or equivalent statement - wrap the logo/site name in h1 for
+              //home page, but use h3 or h4 for sub-pages (content title is h1)
+              //this should be done oppositely in index.php, etc for subpages
+        ?>
 	</header>
 	<nav class="body">
 		<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('nav-widget-area') ) : else : ?>

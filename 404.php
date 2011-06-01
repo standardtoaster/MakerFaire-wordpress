@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <section class="body">
-		<?php get_sidebar(); ?>
 		<article>
 			<header>
-				<h2>Error 404 - Page Not Found</h2>
+				<h1>Error 404 - Page Not Found</h1>
 			</header>
 		</article>
+        <?php get_sidebar(); ?>
 	</section>
 <?php get_footer(); ?>

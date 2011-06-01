@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 	<section class="body single">
-		<?php get_sidebar(); ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
-				<h2><?php the_title(); ?></h2>
+				<h1><?php the_title(); ?></h1>
 				<p> <!-- edit this meta stuff? -->
 					<span>Posted on:</span> <?php the_time('F jS, Y'); ?>
 					<span>by</span> <?php the_author(); ?> |
@@ -29,6 +28,6 @@
 			</header>
 		</article>
 		<?php endif; ?>
-	
+	<?php get_sidebar(); ?>
 	</section>
 <?php get_footer(); ?>
