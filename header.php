@@ -3,6 +3,9 @@
 <!--[if (gt IE 7)|!(IE)]><! --><html <?php language_attributes(); ?>><!-- <![endif]-->
 <head>
 	<meta charset="utf-8" />
+    <title><?php wp_title(''); ?></title>
+    <?php wp_head(); ?>
+
 	<!-- http://google.com/webmasters -->
     <meta name="google-site-verification" content="" />
 
@@ -21,10 +24,7 @@
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>
-	<title><?php wp_title(''); ?></title>
-	
 	<?php //if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,7 +33,6 @@
         <?php endif; ?>
         <?php //todo - add an if_is_home or equivalent statement - wrap the logo/site name in h1 for
               //home page, but use h3 or h4 for sub-pages (content title is h1)
-              //this should be done oppositely in index.php, etc for subpages
         ?>
 	</header>
 	<nav class="body">
