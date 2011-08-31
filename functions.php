@@ -2,8 +2,7 @@
     // Load jQuery
     if ( !is_admin() ) {
         wp_deregister_script('jquery');
-        wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false);
-        wp_enqueue_script('jquery');
+		// just deregister - don't add the new one here - instead, include jQuery in footer.php
     }
 
     // Clean up the <head>
@@ -80,7 +79,7 @@
 	// sidebars / widget areas: I have one in the header, nav, sidebar, and footer
     register_sidebar(array(
         'name' => 'Sidebar Widgets',
-        'id'   => 'sidebar-widgets',
+        'id'   => 'sidebar-widget-area',
         'description'   => 'These are widgets for the sidebar.',
         //'before_widget' => '<div id="%1$s" class="widget %2$s">',
         //'after_widget'  => '</div>',

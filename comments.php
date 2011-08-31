@@ -11,7 +11,7 @@
 ?>
 
 <!-- you can start editing here -->
-<section class="comments">
+<section class="comments" id="comments">
 <?php if ($comments) : ?>
     <h2>
         <?php comments_number('There are not any comments on this article yet.',
