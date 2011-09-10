@@ -11,178 +11,110 @@
     font-style: normal;
 }
 
-/* TOUCAN CSS RESET | v0.1.9 */
-/* Adapted by Aaron James Young */
+/* normalize.css - mostly taken from the HTML5 Boilerplate */
+/* build WITHIN this stylesheet (changing some values, etc.) rather than BELOW it */
 
-/* General
----------------------------------------- */
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, 
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-}
-
-p, blockquote, q, pre, address, hr, code, samp,
-dl, ol, ul, form, table, fieldset, menu {
-	margin-bottom: 1.5em;
-}
-
-/* html5 elements */
-/* required for FF <= 3.6 */
-header, footer, section, nav, aside, article, figure, hgroup {
-  display: block;
-}
-
-/* Structure
----------------------------------------- */
-html { font-size: 100%; }
-body { line-height: 1.5em; } /* define a pixel font size later in this stylesheet */
-
-/* Text
----------------------------------------- */
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-h1 { font-size: 3em; line-height: 1.1em; margin-bottom: .238em; }
-h2 { font-size: 2em; line-height: 1.15em; margin-bottom: .357em; }
-h3 { font-size: 1.5em; line-height: 1.2em; margin-bottom: .476em; } 
-em, i { font-style: italic; }
-strong, b { font-weight: bold; }
-blockquote, q, cite { font-style: italic; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after,
-q:before, q:after { content: ""; content: none; }
-code, kbd, pre, samp, { } /* set a font */
-pre { /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
-  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
-  padding: 15px;
-}
-abbr, dfn { border-bottom: 1px dotted; cursor: help; font-style: normal; font-variant: normal; }
-var { font-style: normal; }
-/* Set sub, sup without affecting line-height: gist.github.com/413930 */
-sub, sup { font-size: 75%; line-height: 0; position: relative; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-
-/* Hypertext
----------------------------------------- */
-a:focus { outline: 1px dotted; }
-
-/* Image
----------------------------------------- */
-img { border: 0; }
-
-/* List
----------------------------------------- */
-
-ul { list-style: disc outside none; }
-ol { list-style: decimal outside none; }
-li { margin-left: 24px; } /* orig 2em */
-li ul, li ol { margin-bottom: 0; }
-dt { font-weight: bold; }
-dd { margin-bottom: 1em; }
-/* Remove margins for navigation lists */
-nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
-
-/* Presentation
----------------------------------------- */
-hr { border: 0; border-bottom: 1px solid; }
-small, sub, sup { font-size: .85em; }
-sub, sup { line-height: 1; }
-sub { vertical-align: bottom; }
-sup { vertical-align: top; }
-del, s, { text-decoration: line-through; }
-ins { border-bottom: 1px dotted; text-decoration: none; }
-bdo { border-bottom: 1px dotted; }
-
-/* Form
----------------------------------------- */
-fieldset { padding: 1em; }
-legend { font-weight: bold; padding: 0 .25em; }
-input, textarea, select, button { font-family: inherit; font-size: 100%; }
-input[type=button], input[type=file], input[type=image], input[type=reset], input[type=submit], 
-button[type=button], button[type=reset], button[type=submit] { cursor: pointer;	line-height: 1; }
-textarea { line-height: 1.25; text-align: left; }
-/* Align checkboxes, radios, text inputs with their label tjkdesign.com/ez-css/css/base.css  */
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
-/* Hand cursor on clickable input elements */
-label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
-
-/* Table
----------------------------------------- */
-table { border: 0; border-collapse: collapse; border-spacing: 0; line-height: 1.3; }
-caption, th, td { text-align: left; vertical-align: top; }
-th, td { border: 1px solid; padding: .5em 1em; }
-caption { padding-bottom: 1em; }
-th { font-weight: bold; }
-
-/* box-sizing to make things easier. Use a fallback for IE 6 & 7 */
+/* RESET - these don't need to be changed */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+/* correct IE font-size in ems, force vertical scrollbar in none-IE, prevent iOS text size adjust h5bp.com/g */
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu {
+	margin: 0 0 0 1.5em; padding: 0; } /*change margins? */
+li { margin-left: 24px; } /* change margins? */
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
 body, div, object, iframe, header, footer, section, nav, aside, article, figure,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, li,
 form, fieldset, textarea, input { 
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; /* these settings work in FF, Webkit, and IE8+ */
-}
+    box-sizing: border-box; /* these settings work in FF, Webkit, and IE8+ */ }
+/* end RESET section - below, contains some reset styles but work in this area */
 
-/***********************CUSTOMIZATION AND LAYOUT STUFF***************************/
+/* body and general typography, general form, general table styles */
+body { margin: 0; font-size: 14px; line-height: 1.5em; }
+body, button, input, select, textarea { font-family: 'Liberation Sans', sans-serif; color: #222; }
 
-/* First, set some generic styles */
-body { font-family: 'Liberation Sans', sans-serif; /* no helvetica or arial */
-    /* set a pixel font size here, no need to set any other font sizes */ }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1 { font-size: 3em; line-height: 1.1em; margin-bottom: .238em; }
+h2 { font-size: 2em; line-height: 1.15em; margin-bottom: .357em; }
+h3 { font-size: 1.5em; line-height: 1.2em; margin-bottom: .476em; }
+a { }
+a:visited { }
+a:hover { }
+a:focus { outline: thin dotted; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+/* improve readability when focused & hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+b, strong { font-weight: bold; }
+blockquote { margin: 0 24px 1.5em 24px; } /*aaron edited*/
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+ul, ol { }
+nav ul, nav ol, nav li { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
-/* self-clearing floats */
-.mod:before, .mod:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
-.mod:after { clear: both; }
-/* Fix mod: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
-.mod { zoom: 1; }
+/* typography styles I don't often use and can be deleted if I don't need them */
+abbr[title] { border-bottom: 1px dotted; }
+dfn { font-style: italic; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+dd { margin: 0 0 0 40px; }
+/* end not often used typography */
 
-/* optional vanity styles */
-::selection {background: #c80000;}
-::-moz-selection {background: #c80000;}
-
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+/* selection styles */
+::selection {background: #c80000; color: #ffffff; text-shadow: none; }
+::-moz-selection {background: #c80000; color: #ffffff; text-shadow: none; }
 img::selection {background: transparent;}
 img::-moz-selection {background: transparent;}
 
-.gl { float: left; } /* adjust direction of float for golden columns here */
-.gs { float: right; }
+/* LAYOUT, more specific styles */
 
 /* default Wordpress classes added by the editor */
-/* these are here because they may need to be treated differently in different layouts */
-.alignright { float: right; display: inline; margin: 0 0 15px 15px; }
-.alignleft { float: left; display: inline; margin: 0 15px 15px 0; }
+.alignright { float: right; display: inline; margin: 0 0 12px 12px; }
+.alignleft { float: left; display: inline; margin: 0 12px 12px 0; }
 .center { display: block; margin: 0 auto; }
-
-/* text general styles */
-h1 { }
-h2 { }
-h3 { }
-p { }
-ul { }
-ol { }
-hr { }
-a { }
-a:link { -webkit-tap-highlight-color: #FF5E99; }
 
 /* "Grid" stuff - inspired by Less Framework and tweaked into oblivion
  * There are three media query layouts: 768px, 480px, 320px
- * Use these as desired, delete or comment the others
+ * Use these as desired, delete others
  * ------------------------------------- */
 
 /* 960px width
  * .gl and .gs in this layout are actually 2/3 + 1/3, not golden ratio
  */
-.body { padding: 0 24px; width: 960px; margin: 0 auto; }
-.gl /* golden largei = 549 */ { width: 592px; }
-.gs /* golden small = 339 */ { width: 296px; }
-.full { width: 912px; }
+.body { padding: 0 24px; width: 960; margin: 0 auto; }
+.gl /* golden largei = 549 */ { float: left; width: 600px; }
+.gs /* golden small = 339 */ { float: right; width: 288px; }
+.full { width: 960px; margin-right: 24px; }
 .half { float: left; width: 444px; margin-right: 24px; }
 .half:nth-of-type(2n) { margin-right: 0; }
 .third { float: left; width: 288px; margin-right: 24px; }
@@ -192,11 +124,11 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
 .sixth { float: left; width: 132px; margin-right: 24px; }
 .sixth:nth-of-type(6n) { margin-right: 0; }
 
-/* 768px width */
+/* 768px width - ipad*/
 @media only screen and (max-width: 959px) and (min-width: 768px) {
 	.body { padding: 0 24px; width: 768px; margin: 0 auto; }
-	.gl { width: 430px; }
-	.gs { width: 266px; }
+	.gl { float: left; width: 430px; }
+	.gs { float: right; width: 266px; }
 	.full { width: 720x; }
 	.half { float: left; width: 348px; margin-right: 24px; }
 	.half:nth-of-type(2n) { margin-right: 0; }
@@ -209,7 +141,8 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
 /* 480px width */
 @media only screen and (max-width: 767px) and (min-width: 480px) {
     .body { padding: 0 24px; width: 480px; margin: 0 auto; }
-    .gl { width: 255px; } .gs { width: 157px; }
+    .gl { float: left; width: 255px; }
+	.gs { float: right; width: 157px; }
     .full { width: 432px; }
     .half, .third, .quarter, .sixth { float: left; width: 206px; margin-right: 24px; }
     .third:nth-of-type(3n) { margin-right: 24px; }
@@ -222,4 +155,31 @@ a:link { -webkit-tap-highlight-color: #FF5E99; }
     .gl, .gs, .full, .half, .third, .quarter { width: 272px; float: left; margin: 0; }
     .sixth { float: left; width: 124px; margin-right: 24px; }
     .sixth:nth-of-type(2n) { margin-right: 0; }
-}
+
+/* end LAYOUT, more specific styles */
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   Remember to delete the ones you're not using
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

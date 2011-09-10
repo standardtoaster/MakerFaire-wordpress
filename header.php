@@ -11,6 +11,9 @@
 
     <!-- don't allow IE9 to render the site in compatibility mode. Dude. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
 	<!--[if lt IE 9]>
