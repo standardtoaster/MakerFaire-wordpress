@@ -27,10 +27,16 @@ BODY [body class, not to be confused with .body]
 ---li (there are two li's, one for "prev posts" and one for "next posts")
 -FOOTER.body
 
-I use a modified Toucan CSS Reset combined with some ideas from the CSS LESS framework (media
-queries for different screen sizes). I also place my CSS files in a <theme>/css folder and that
-location is used in the header.php file of the theme. The normal style.css is used only for theme
-information.
+There are two CSS files - ie.css and style.css. style.css uses a customized version of the new
+normalize.css reset stylesheet. I've taken it from the stylesheet in the HTML5 Boilerplate by Paul
+Irish and moved a few things around. It's basically structured as: reset styles first, then
+fill-in-and-use styles. I've tried to put it together in a way that I don't usually have to touch
+the reset section.
+
+I use a faux-grid - basically a few extra classes that define half-width, quarter-width,
+third-width, and sixth-width columns with gutters. It's not a perfect system but it helps me out
+with layouts. There are a few media queries (ORIGINALLY based on Less Framework, now tweaked a lot)
+that also have the grid classes built in. The default layout width is 960px.
 
 I use "box-sizing: border-box" in my reset stylesheet for layout elements. This means that browsers
 will calculate width and height to INCLUDE padding and border on those elements... see
@@ -45,11 +51,13 @@ My IE fallback system is pretty specific to my workflow as well:
   stylesheet) so adjustments can be made to the layout if needed.
 - IE7 and IE6 are also caught in the [if lt IE 9] conditional comment. They also get a different
   <html> tag that contains [class="ie7"]. This is because IE7 and below don't work with the
-  box-sizing trick above, so we need to define different widths on those elements. ie.css has
-  several extra "reset" styles built in.
+  box-sizing trick above, so we need to define different widths on those elements. ie.css has a few
+  extra "grid" styles built in since IE6,7 don't support box-sizing, and IE 8 doesn't support
+  nth-of-type.
 - Note: I'm using html5shiv. If you use Modernizr, that already has the shiv built in
-- Note: IE 6-8 don't support media queries and will use the default 768px layout. You can use this
-  script: http://code.google.com/p/css3-mediaqueries-js/ to enable your media queries in IE
+- Note: IE 6-8 don't support media queries and will use the default 960px layout. You can use
+  Respond.js (not included) to enable your media queries in IE, but I don't see a real need for it -
+  IE is ONLY on desktop computers and 960px is a pefectly acceptable layout for nearly all folks.
 
 I guarantee that this whole theme will change over time.
 
