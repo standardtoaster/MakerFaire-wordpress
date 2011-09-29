@@ -22,7 +22,7 @@ audio:not([controls]) { display: none; }
 /* correct IE font-size in ems, force vertical scrollbar in none-IE, prevent iOS text size adjust h5bp.com/g */
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu {
-	margin: 0 0 0 1.5em; padding: 0; } /*change margins? */
+	margin: 0 0 1.5em 0; padding: 0; } /*change margins? */
 li { margin-left: 24px; } /* change margins? */
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 svg:not(:root) { overflow: hidden; }
