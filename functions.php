@@ -3,6 +3,8 @@
     if ( !is_admin() ) {
         wp_deregister_script('jquery');
 		// just deregister - don't add the new one here - instead, include jQuery in footer.php
+        // this may affect some plugins. I had to comment this on one site. Kind of disappointing,
+        // probably indicates poorly written plugins.
     }
 
     // Clean up the <head>

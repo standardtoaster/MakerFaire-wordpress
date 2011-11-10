@@ -23,7 +23,10 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>: Feed" href="<?php bloginfo('rss2_url'); ?>" />
-	
+
+    <!-- put favicon.ico and favicon.png in root directory -->
+	<link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon.png" />
+    
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>

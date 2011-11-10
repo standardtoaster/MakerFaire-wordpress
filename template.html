@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html>
+<!--[if lte IE 7]><html class="ie7"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><! --><html><!-- <![endif]-->
     <head>
         <meta charset="utf-8" />
+        <title>asdf</title>
         <!-- http://google.com/webmasters -->
         <meta name="google-site-verification" content="" />
         
+        <!-- don't allow IE9 to render the site in compatibility mode. Dude. -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
         <!-- prevent scaling pages in iOS devices. Probably redundant if used w/ media queries -->
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-        <link rel="shortcut icon" href="-/img/favicon.png"/>
-        <!-- This is the traditional favicon.
-             - size: 16x16 or 32x32 -->
+        <!-- <meta name="viewport" content="width=device-width; initial-scale=1.0"> -->
         
-        <link rel="apple-touch-icon" href="-/img/custom_icon.png"/>
-        <!-- The is the icon for iOS's Web Clip.
-             - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
-             - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-             - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-        
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" />
         <!--[if lt IE 9]>
             <link rel="stylesheet" media="all" href="css/ie.css"/>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-        <title>asdf</title>
+        <!-- put favicon.ico and favicon.png in root directory -->
+        <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/favicon.png" />
     </head>
     <body>
         <header class="body">
@@ -53,7 +49,7 @@
             asdf
         </footer>
         
-        <!-- jQuery (note that the WP theme uses functions.php to include only one copy of jquery) -->
+        <!-- jQuery -->
        	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="scripts/custom.js"></script>
 
