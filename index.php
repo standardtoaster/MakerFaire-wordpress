@@ -12,14 +12,9 @@
 				</p>
 			</header>
 			<section>
-				<?php the_content(); ?>
+				<?php the_excerpt(); // or you can use the_content(); ?>
 			</section>
-			<footer> <!-- post metadata -->
-				<p><?php the_tags('<span>Tags:</span> ', ', ', ''); ?></p>
-				<p><span>Posted in</span> <?php the_category(', '); ?> | 
-				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-				<?php //comments_template(); //this is only in single.php ?>
-			</footer>
+			<?php // you can pull an article <footer> from single.php here too ?>
 		</article>
 		<?php endwhile; ?>
 		<nav class="pagination">

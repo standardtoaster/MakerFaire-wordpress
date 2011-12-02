@@ -13,13 +13,8 @@
 				</p>
 			</header>
 			<section>
-				<?php the_content(); ?>
+				<?php the_excerpt(); ?>
 			</section>
-			<footer> <!-- post metadata -->
-				<p><?php the_tags('<span>Tags:</span> ', ', ', ''); ?></p>
-				<p><span>Posted in</span> <?php the_category(', ') ?> | 
-				<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
-			</footer>
 		</article>
 		<?php endwhile; ?>
 		<nav class="pagination">
