@@ -8,7 +8,6 @@
 	</footer>
 	<!-- analytics -->
 	<?php wp_footer(); ?>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/scripts/custom.js"></script>
 </body>
 </html>
